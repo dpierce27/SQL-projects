@@ -1,0 +1,24 @@
+select*
+from superstore
+where price>0
+order by price asc;
+
+select avg (price),'Kitchen_Supplies'
+from superstore;
+
+select avg (price),'Kitchen_Supplies'
+from superstore
+where category like 'Kitchen_Supplies';
+
+SELECT Sum(price),category
+FROM superstore
+where category like 'Kitchen_Supplies'
+group by category;
+
+select (category),price
+from superstore
+order by category;
+
+select*,stock_quantity
+from superstore
+where stock_quantity<39
